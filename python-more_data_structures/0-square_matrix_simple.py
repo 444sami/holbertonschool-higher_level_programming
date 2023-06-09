@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    matriz_a = []
-    matriz_b = []
+    if matrix is None:
+        return
+    matriz = []
     for i in matrix:
-        matriz_a = list(map(lambda x: x*x, i))
-        matriz_b.append(matriz_a)
-    return matriz_b
+        n = list(map(lambda x: x ** 2, matrix[i]))
+        matriz.append(n)
+    return matriz
